@@ -1,0 +1,4 @@
+<Files webhook.log>
+order deny,allow
+deny from all
+</Files>
