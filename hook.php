@@ -32,7 +32,7 @@ if ($_REQUEST['key'] == 'TsbWK7eZXGkxipXt6C' && isset($_REQUEST['payload']))
     $payload = json_decode($_REQUEST['payload']);
     $branch = $payload->ref;
     $site_name = strtolower($payload->{'repository'}->{'name'});
-    if ($branch == 'master')
+    if ($branch == 'refs/heads/master')
     {
         $git_dir = '/srv/www/' . $site_name . '/' . $site_name . '.git/';
         $output = shell_exec('cd ' . $git_dir . ' && git reset --hard HEAD && git pull origin master:master');
