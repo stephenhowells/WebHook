@@ -1,0 +1,1 @@
+This file is intentionally left blank. Events will be logged here when new commits are processed. If this file is deleted on accident the hook.php script will automatically recreate it once a new commit is received.

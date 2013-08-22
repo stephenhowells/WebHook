@@ -1,6 +1,6 @@
 # GitHub WebHook
 
-These instructions cover how to setup a GitHub Service Hook to deploy code to your web server automatically with GitHub. Stop using FTP to deploy your code changes!
+These instructions describe how to deploy code to your server automatically when issuing new commits to GitHub. Stop using FTP to deploy your code changes!
 
 ### On the Web Server
 
@@ -16,7 +16,7 @@ In a public webroot on the server make a `webhook` folder with this structure (`
 	|
 	|-.htaccess
 
-Grant the Apache user ownership of this folder and its contents: `# chown apache:apache -R webhook`. View the sample `hook.php` and `.htaccess` files I've included. The `hook.php` script is merely a simple example of how to pull new commits to the server and checkout the code into a live Apache webroot. The `.htaccess` file simply protects the `webhook.log` from being publicly readable.
+Grant the Apache user ownership of this folder and its contents: `# chown apache:apache -R webhook`. View the sample `hook.php` and `.htaccess` files I've included. The `hook.php` script is merely a simple example of how to pull new commits to the server and checkout the code into a live Apache webroot. The `webhook.log` file will retain a running log of all the commits the the web server has processed. The `.htaccess` file simply protects the `webhook.log` from being publicly readable.
 
 Change directories to the folder containing your website on your server (`# cd /srv/www/example.com`).
 
