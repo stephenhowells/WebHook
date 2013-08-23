@@ -20,16 +20,16 @@ Grant the Apache user ownership of this folder and its contents: `# chown apache
 
 Change directories to the folder containing your website on your server (`# cd /srv/www/example.com`).
 
-Important: *Do not navigate into the public webroot folder (eg. `public_html`). For security reasons I do not store git repositories in publicly available web folders.*
+Important: *Do not navigate into the public webroot folder (eg. `public_html`). For security reasons I do not store Git repositories in publicly available web folders.*
 
 Create a folder containing the domain name of the site with ".git" appended to the name (`# mkdir example.com.git`). Change directories into this newly created folder and issue commands:
 
 - `# git init` to initialize the repo.
 - Add the GitHub origin address as a remote: `# git remote add origin git@github.com:username/repo_name.git`.
-- Verify that the remote was successfully added: `# git remote -v`. Ensure that ports 22 and 9418 are open in the firewall for git to contact remotes.
+- Verify that the remote was successfully added: `# git remote -v`. Ensure that ports 22 and 9418 are open in the firewall for Git to contact remotes.
 - Issue an initial pull request: `# git pull origin master:master`. If everything is configured properly the pull will complete successfully.
 
-Make Apache the owner of the `example.com.git` folder: `# chown apache:apache -R /srv/www/example.com/example.com.git`. Finally, make Apache the owner of the public web folder that the git repository will checkout into: `# chown apache:apache -R /srv/www/example.com/public_html`.
+Make Apache the owner of the `example.com.git` folder: `# chown apache:apache -R /srv/www/example.com/example.com.git`. Finally, make Apache the owner of the public web folder that the Git repository will checkout into: `# chown apache:apache -R /srv/www/example.com/public_html`.
 
 ### On GitHub.com
 
